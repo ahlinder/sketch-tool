@@ -1,0 +1,13 @@
+.horizontal {
+    display: flex;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    height: 40px;
+    width: 40px;
+}
