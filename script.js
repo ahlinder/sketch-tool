@@ -1,7 +1,7 @@
-function initializeTable(size){
+function initializeTable(n){
     resetTable();
-    createTable(size);
-    setContentSize(size);
+    createTable(n);
+    setContentSize(n);
 }
 
 function createTable(n){
@@ -43,14 +43,14 @@ function setContentSize(size) {
 }
 
 function setTableSize() {
-    let size = 101;
+    let tempSize = 101;
     do {
-        size = prompt("what size should the drawing field be (x by x)?");
-        if(size > 100){
+        tempSize = prompt("what size should the drawing field be (x by x)?");
+        if(tempSize > 100){
             alert("size must be less than 100 by 100");
         }
-    } while(size > 100);
-
+    } while(tempSize > 100);
+    size = tempSize;
     initializeTable(size);
 }
 
@@ -82,3 +82,8 @@ sizePrompt.addEventListener('click', setTableSize);
 
 let colorPrompt = document.querySelector('.colorSelection');
 colorPrompt.addEventListener('click', setColor);
+
+let clearButton = document.querySelector('.clear');
+clearButton.addEventListener('click', function () {
+    initializeTable(size);
+});
