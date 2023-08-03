@@ -34,7 +34,7 @@ function resetTable() {
 }
 
 function setContentSize(size) {
-    let newSize = 960/size;
+    let newSize = 720/size;
     let content = document.querySelectorAll('.content');
     content.forEach(div => {
         div.style.width = newSize + 'px';
@@ -73,7 +73,7 @@ function setColor(){
 
 
 let color = 'black';
-let size = 16;
+let size = 12;
 const body = document.querySelector('body');
 body.onload = createTable(size);
 
