@@ -46,6 +46,12 @@ h2{
 .gitLogo{
     max-width: 25px;
     max-height: 25px;
+    vertical-align: middle;
+}
+
+.gitLogo:hover{
+    max-width: 30px;
+    max-height: 30px;
 }
 
 p{
